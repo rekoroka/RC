@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script src="static/js/jquery-3.3.1.min.js"></script>
+<script src="static/js/index.js"></script>
+<style type="text/css">
+<!--
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+-->
+</style>
+</head>
+<body>
+<input type="text" id="motor_speed" value="255"/>
+<table border=2 width="1000" height="400" class="unselectable">
+    <TR>
+        <TD id="frontLeft" ontouchstart="motor_go('0')" ontouchend="motor_stop('0')" style="background:blue;">左 前</TD>
+        <TD id="frontRight" ontouchstart="motor_go('1')" ontouchend="motor_stop('1')" style="background:green;">右 前</TD>
+    </TR>
+    <TR>
+        <TD id="backLeft" ontouchstart="motor_back('0')" ontouchend="motor_stop('0')" style="background:yellow;">左 後</TD>
+        <TD id="backRight" ontouchstart="motor_back('1')" ontouchend="motor_stop('1')" style="background:red;">右 後</TD>
+    </TR>
+</table>
+</body>
+</html>
